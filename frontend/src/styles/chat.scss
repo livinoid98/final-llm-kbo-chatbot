@@ -1,0 +1,77 @@
+@import './mixin.scss';
+
+.chat {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    top: -30px;
+    &__search {
+        position: relative;
+        &-input {
+            @include setSize(1000px, 60px);
+            border-radius: 14px;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        &-button {
+            @include setSize(66px, 60px);
+            border-top-right-radius: 14px;
+            border-bottom-right-radius: 14px;
+            border: none;
+            background-color: #7E96FF;
+            border: 2px solid #7E96FF;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__main {
+        &-ul {
+            @include flex(flex, center, flex-start);
+            flex-direction: column;
+            &-li {
+                width: 50%;
+                display: inline-block;
+                background-color: #D2D1D6;
+                padding: 20px;
+                box-sizing: border-box;
+                border-radius: 14px;
+                @include font(16px, 500, #7A7B7E);
+                margin-top: 30px;
+
+                &:nth-child(1) {
+                    margin-top: 56px;
+                }
+
+                &:nth-child(even) {
+                    align-self: flex-end;
+                    background-color: #7E96FF;
+                    @include font(16px, 500, #fff);
+                    .chat__main-ul-li-header-user {
+                        @include font(17px, 900, #fff);
+                    }
+                }
+                &-header {
+                    @include flex(flex, flex-start, center);
+                    &-img {
+
+                    }
+                    &-user {
+                        margin-left: 14px;
+                        @include font(17px, 900, #0C0C0C);
+                    }
+                }
+                &-content {
+                    text-align: left;
+                    margin-top: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
