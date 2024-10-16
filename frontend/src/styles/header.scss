@@ -1,7 +1,7 @@
 @import './mixin.scss';
 
 .header {
-    @include setSize(1200px, 70px);
+    @include setSize(1120px, 80px);
     margin: auto;
     @include flex(flex, space-between, center);
     position: absolute;
@@ -46,7 +46,7 @@
     }
 
     &__info {
-        @include setSize(1200px, 100%);
+        @include setSize(1000px, 100%);
         text-align: left;
         @include flex(flex, center, flex-start);
         flex-direction: column;

@@ -5,6 +5,7 @@
     margin: 0 auto;
     position: relative;
     top: -30px;
+    margin-bottom: 143px;
     &__search {
         position: relative;
         &-input {
@@ -13,7 +14,7 @@
             border: none;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             box-sizing: border-box;
-            padding: 10px;
+            padding: 26px;
         }
 
         &-button {
